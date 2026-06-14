@@ -1,0 +1,11 @@
+Average_Price = AVERAGE(Mobile_Sales_Data[Price Per Unit])
+
+MTD = TOTALMTD([Total_Sales],Custom_Calender[Date].[Date])
+
+Total_Quantity = SUMX(Mobile_Sales_Data, Mobile_Sales_Data[Units Sold]) 
+
+Total_Sales = SUMX(Mobile_Sales_Data, Mobile_Sales_Data[Units Sold]*Mobile_Sales_Data[Price Per Unit])
+
+Transactions = COUNTROWS(Mobile_Sales_Data)
+
+YTD = TOTALYTD([Total_Sales],Custom_Calender[Date].[Date])
